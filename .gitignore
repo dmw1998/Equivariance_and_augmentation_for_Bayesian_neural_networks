@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Data + caches
+data/
+*.pt
+*.pth
+
+# Experiment tracking / outputs
+wandb/
+trained_models/
+results/
+*.log
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store

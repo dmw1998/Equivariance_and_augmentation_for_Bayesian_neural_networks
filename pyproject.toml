@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ebnn"
+version = "0.1.0"
+description = "Equivariance and augmentation for Bayesian neural networks (C4 / FashionMNIST)."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "torch>=2.0",
+    "torchvision>=0.15",
+    "numpy>=1.24",
+    "wandb>=0.15",
+]
+
+[tool.setuptools.packages.find]
+include = ["ebnn*"]
+
+[tool.black]
+line-length = 110
+target-version = ["py39"]
+
+[tool.isort]
+profile = "black"
+line_length = 110
+
+[tool.ruff]
+line-length = 110
+target-version = "py39"
+
+[tool.ruff.lint]
+# E501 (line length) is handled by black; F401 in __init__ re-exports is intentional.
+ignore = ["E741"]
